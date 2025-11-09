@@ -4,13 +4,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // Import Link for the logo
+import Link from "next/link";
 
 // --- Logo Component ---
 const Logo = () => (
   <Link href="/">
     <Image
-      src="/VFilms_Logo.png" // Your file
+      src="/VFilms_Logo.png"
       alt="V Films Logo"
       width={81}
       height={31}
@@ -21,18 +21,12 @@ const Logo = () => (
 
 // --- Menu Icon Components ---
 const PaintStrokeMenuIcon = () => (
-  <Image
-    src="/Vector.png" // Your file
-    alt="Open Menu"
-    width={30}
-    height={20}
-    priority
-  />
+  <Image src="/Vector.png" alt="Open Menu" width={30} height={20} priority />
 );
 
 const PaintStrokeCloseIcon = () => (
   <Image
-    src="/Vector Close.png" // Your file
+    src="/Vector Close.png"
     alt="Close Menu"
     width={30}
     height={20}
@@ -49,9 +43,7 @@ const NavLinks = ({ isMobile }) => {
     { name: "Varnan", href: "#" },
   ];
 
-  // This logic creates the horizontal or vertical links
   if (isMobile) {
-    // This is for the full-screen mobile menu
     return (
       <nav className="flex flex-col items-center space-y-6 pt-24">
         {navItems.map((item) => (
@@ -73,7 +65,6 @@ const NavLinks = ({ isMobile }) => {
     );
   }
 
-  // This is for the horizontal desktop menu (when open)
   return (
     <nav className="flex items-center space-x-6">
       {navItems.map((item) => (
@@ -101,13 +92,10 @@ export default function Header() {
 
   return (
     <>
-      {/* This is the fixed header bar */}
       <header className="fixed top-0 left-0 w-full z-30 bg-textured shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo is now permanently on the left */}
           <Logo />
 
-          {/* Desktop Navigation (hidden on mobile) */}
           <div className="hidden md:flex items-center space-x-6">
             {isNavOpen ? (
               // Desktop Open State
@@ -121,7 +109,6 @@ export default function Header() {
                 </button>
               </>
             ) : (
-              // Desktop Closed State
               <button
                 onClick={() => setIsNavOpen(true)}
                 className="text-brand-dark"
@@ -131,7 +118,6 @@ export default function Header() {
             )}
           </div>
 
-          {/* Mobile Navigation Button (only on mobile) */}
           <div className="md:hidden">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
@@ -143,10 +129,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* This is the full-screen mobile menu popup (only for mobile) */}
       {isNavOpen && (
         <div className="md:hidden fixed inset-0 z-20 bg-brand-background flex flex-col p-6">
-          {/* Header for the mobile popup menu */}
           <div className="container mx-auto px-6 py-4 flex justify-between items-center absolute top-0 left-0 right-0">
             <Logo />
             <button
@@ -156,7 +140,6 @@ export default function Header() {
               <PaintStrokeCloseIcon />
             </button>
           </div>
-          {/* Mobile links */}
           <NavLinks isMobile={true} />
         </div>
       )}

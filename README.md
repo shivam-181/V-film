@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# V Films - Front-End Intern Test
 
-## Getting Started
+This project is a responsive, multi-section single-page application built with Next.js (App Router) and Tailwind CSS, featuring a fully functional, API-integrated contact form.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Deployed Version
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The live, deployed version of this project is available at:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## **[https://v-film-ten.vercel.app/](https://v-film-ten.vercel.app/)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Run This Project Locally
 
-## Learn More
+1.  **Clone or download the repository.**
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Install dependencies:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Set up environment variables:**
 
-## Deploy on Vercel
+    - Create a file named `.env.local` in the root of the project.
+    - Add the following line to it:
+      ```
+      NEXT_PUBLIC_API_URL=[https://vernanbackend.ezlab.in/api/contact-us/](https://vernanbackend.ezlab.in/api/contact-us/)
+      ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Run the development server:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm run dev
+    ```
+
+5.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Deliverables Checklist
+
+- **Working Application:** The code is included in this archive.
+- **Responsive Layout:** The application is responsive across mobile, tablet, and desktop.
+- **Functional Contact Form:** The form at the bottom of the homepage includes client-side validation and successfully integrates with the `POST` API.
+- **Clean Code:** The code is structured into reusable components (Header, Sections, etc.).
+- **Deployed Version:** The live Vercel link is provided above.

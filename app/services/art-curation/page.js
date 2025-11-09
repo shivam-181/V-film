@@ -33,7 +33,6 @@ export default function ArtCurationPage() {
         </Link>
       </div>
 
-      {/* --- Page Content (from image_3995d0.jpg) --- */}
       <div className="flex flex-col md:flex-row gap-12 md:gap-16">
         {/* --- Left Column: Image --- */}
         <div className="w-full md:w-1/2">

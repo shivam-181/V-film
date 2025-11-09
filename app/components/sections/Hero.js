@@ -1,13 +1,10 @@
 // File: app/components/sections/Hero.js
-// NO 'use client' or 'useState' needed here anymore.
 
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    // The 'min-h-screen' is gone, as the padding is handled by layout.js
     <section className="relative w-full container mx-auto px-6 py-12 md:py-24">
-      {/* Background div (placeholder) */}
       <div
         className="absolute inset-0 z-0 opacity-10"
         style={{
@@ -24,7 +21,7 @@ export default function Hero() {
         <div className="w-full md:w-1/2 flex justify-center items-center p-8">
           <div className="relative w-full max-w-sm aspect-square">
             <Image
-              src="/Hero Mandala.png" // Assumes you have this in /public
+              src="/Hero Mandala.png"
               alt="Mandala"
               width={400}
               height={400}
@@ -32,7 +29,7 @@ export default function Hero() {
             />
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <Image
-                src="/VFilms_Logo.png" // Assumes you have this in /public
+                src="/VFilms_Logo.png"
                 alt="V Films Logo"
                 width={202}
                 height={77}

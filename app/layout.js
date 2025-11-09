@@ -2,7 +2,7 @@
 
 import { Montserrat, Playfair_Display, Island_Moments } from "next/font/google";
 import "./globals.css";
-import Header from "./components/sections/Header"; // 1. Import the new Header
+import Header from "./components/sections/Header";
 
 // --- Font Config (Correct) ---
 const montserrat = Montserrat({
@@ -35,8 +35,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.variable} ${playfair.variable} ${islandMoments.variable} font-sans`}
       >
-        <Header /> {/* 2. Add the global Header */}
-        {/* 3. Add padding-top to the main content to push it below the fixed header */}
+        <Header />
         <main className="pt-20">{children}</main>
       </body>
     </html>

@@ -15,8 +15,6 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Contact />
-
-      {/* We will add <AboutUs />, <Services />, etc. here */}
     </main>
   );
 }

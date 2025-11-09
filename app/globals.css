@@ -4,9 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 1. We create a new utility class called .bg-textured
-     that holds our background color AND the repeating image.
-*/
 @layer utilities {
   .bg-textured {
     @apply bg-brand-background;
@@ -17,7 +14,6 @@
 
 @layer base {
   body {
-    /* 2. We apply our new class to the body */
     @apply bg-textured text-brand-body;
   }
 }

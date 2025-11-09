@@ -60,8 +60,6 @@ export default function Portfolio() {
         <p className="text-brand-body mt-2">Watch the magic we've captured.</p>
       </div>
 
-      {/* --- *** NEW *** 3-Column Layout --- */}
-      {/* This holds the side illustrations and the film strip */}
       <div className="flex items-center justify-center gap-8 mt-16">
         {/* 1. Left Column: Camera Illustration (Hidden on mobile) */}
         <div className="hidden lg:block w-1/4">

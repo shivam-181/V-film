@@ -1,4 +1,3 @@
-// File: app/components/sections/Contact.js
 "use client";
 
 import { useState } from "react";
@@ -6,18 +5,15 @@ import axios from "axios";
 import Image from "next/image";
 
 export default function Contact() {
-  // --- Form Input State (Unchanged) ---
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  // --- Validation & Submission State (Unchanged) ---
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
   const [apiError, setApiError] = useState(null);
 
-  // --- Validation Function (Unchanged) ---
   const validateForm = () => {
     let currentErrors = {};
 
@@ -37,7 +33,6 @@ export default function Contact() {
     return Object.keys(currentErrors).length === 0;
   };
 
-  // --- HandleSubmit Function (Unchanged) ---
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus("idle");
@@ -83,36 +78,30 @@ export default function Contact() {
 
   return (
     <section className="container mx-auto px-6 py-16 md:py-24 relative overflow-hidden">
-      {/* --- Placeholders for corner illustrations --- */}
-
-      {/* THIS IS THE CORRECTED DIV (Bottom Left) */}
       <div className="absolute bottom-0 -left-24 w-72 h-72rounded-full opacity-50">
         {
           <Image
             src="/last2.png"
             alt="Mandala Bottom Left"
-            width={442} // Use exact dimensions
-            height={442} // Use exact dimensions
+            width={442}
+            height={442}
             className="absolute bottom-0 -left-24"
           />
         }
       </div>
 
-      {/* This one is correct (Top Right) */}
       <div className="absolute -top-24 -right-24 w-72 h-72rounded-full opacity-50"></div>
       {
         <Image
           src="/last1.png"
           alt="Mandala Top Right"
-          width={442} // Use exact dimensions
-          height={442} // Use exact dimensions
+          width={442}
+          height={442}
           className="absolute -top-24 -right-24"
         />
       }
 
-      {/* --- Main Two-Column Layout --- */}
       <div className="flex flex-col md:flex-row gap-12 md:gap-16 relative z-10">
-        {/* --- LEFT Column: Text --- */}
         <div className="w-full md:w-1/2 space-y-4 pt-16">
           <p className="text-brand-body text-sm leading-relaxed">
             Whether you have an idea, a question, or simply want to explore how
@@ -126,9 +115,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* --- RIGHT Column: Title, Form, Contact Info --- */}
         <div className="w-full md:w-1/2">
-          {/* Title */}
           <div className="mb-6">
             <h2 className="font-serif text-4xl text-brand-dark">
               Join the Story
@@ -138,9 +125,7 @@ export default function Contact() {
             </p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} noValidate>
-            {/* Form Group: Name */}
             <div className="mb-4">
               <label htmlFor="name" className="text-xs text-gray-500">
                 Your name*
@@ -159,7 +144,6 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Form Group: Email */}
             <div className="mb-4">
               <label htmlFor="email" className="text-xs text-gray-500">
                 Your email*
@@ -178,7 +162,6 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Form Group: Phone */}
             <div className="mb-4">
               <label htmlFor="phone" className="text-xs text-gray-500">
                 Phone
@@ -192,7 +175,6 @@ export default function Contact() {
               />
             </div>
 
-            {/* Form Group: Message */}
             <div className="mb-6">
               <label htmlFor="message" className="text-xs text-gray-500">
                 Your message*
@@ -211,7 +193,6 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Submit Button & Status Message */}
             <div className="flex items-center justify-start gap-6">
               <button
                 type="submit"
@@ -230,7 +211,6 @@ export default function Contact() {
             </div>
           </form>
 
-          {/* Contact Info (below the form) */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 pt-8">
             <p className="font-bold text-brand-orange">
               vernita@varnanfilms.co.in

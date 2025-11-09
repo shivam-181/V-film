@@ -5,11 +5,11 @@ import Image from "next/image";
 // --- Logo Component ---
 const Logo = () => (
   <Image
-    src="/VFilms_Logo.png" // <-- CHANGE THIS to your filename (e.g., "/image_464c55.png")
+    src="/VFilms_Logo.png"
     alt="V Films Logo"
-    width={81} // Based on the original design's size
-    height={31} // Based on the original design's size
-    priority // Helps the logo load faster
+    width={81}
+    height={31}
+    priority
   />
 );
 
@@ -30,8 +30,6 @@ const HamburgerIcon = () => (
   </svg>
 );
 
-// We won't build the full mobile menu for these pages
-// unless you want to. For now, it's just the icon.
 export default function SubPageHeader() {
   return (
     <div className="container mx-auto px-6 pt-6 flex justify-between items-center">
